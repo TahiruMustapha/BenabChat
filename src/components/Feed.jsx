@@ -11,7 +11,10 @@ const Feed = () => {
       </section>
       {/* miniPost */}
       <section className="hidden md:inline-grid md:col-span-1">
-        <MiniPost />
+         <div className=" fixed w-[380px]">
+         <MiniPost />
+         </div>
+       
       </section>
     </main>
   );
