@@ -7,7 +7,7 @@ import Modal from "react-modal";
 import { IoMdAddCircleOutline } from "react-icons/io";
 import { HiCamera } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
-import { app } from "@/firebase";
+import { app } from "../firebaseConfig";
 import {
   addDoc,
   collection,
@@ -83,6 +83,7 @@ const Header = () => {
     });
     setPostUploading(false);
     setIsOpen(false);
+    location.reload();
   }
 
   return (
