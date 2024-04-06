@@ -4,8 +4,9 @@ import { HiOutlineDotsVertical, HiOutlinePaperAirplane } from "react-icons/hi";
 import { IoChatbubbleOutline } from "react-icons/io5";
 import { FaRegBookmark, FaRegHeart } from "react-icons/fa";
 import Link from "next/link";
+import Like from "./Like";
 
-const Post = ({ post }) => {
+const Post = ({ post, likes }) => {
   return (
     <div className=" bg-white my-7   rounded-md">
       <div className=" border ">
@@ -25,13 +26,12 @@ const Post = ({ post }) => {
         />
       </div>
       <div className=" w-full flex items-center justify-between">
-        <div className=" relative flex  w-full py-4 border-none items-center gap-4 ">
-          <FaRegHeart className=" cursor-pointer font-[900] text-2xl" />
-          <IoChatbubbleOutline className=" -rotate-[90deg] cursor-pointer font-[900] text-2xl" />
-          <HiOutlinePaperAirplane className=" rotate-45 cursor-pointer font-[900] text-2xl" />
-          <span className=" font-bold absolute top-12">10 Likes</span>
+        <div className=" flex   w-full py-4 border-none items-center gap-4 ">
+          <Like id={post.id} />
+          <IoChatbubbleOutline className=" -rotate-[90deg] hover:scale-125 transition-transform duration-200 ease-out cursor-pointer font-[900] text-2xl" />
+          <HiOutlinePaperAirplane className=" rotate-45 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out font-[900] text-2xl" />
         </div>
-        <FaRegBookmark className=" cursor-pointer font-[900] text-2xl" />
+        <FaRegBookmark className=" hover:scale-125 transition-transform duration-200 ease-out cursor-pointer font-[900] text-2xl" />
       </div>
       <div className=" my-5 flex flex-col gap-2">
         <p className=" font-semibold">
