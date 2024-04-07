@@ -87,7 +87,7 @@ const Header = () => {
   }
 
   return (
-    <div className=" shadow-sm sticky border-b top-0 bg-white z-30 p-3">
+    <div className=" shadow-sm sticky top-0 bg-black text-white z-30 p-3">
       <div className=" flex items-center justify-between max-w-6xl mx-auto">
         {/* Logo */}
         <Link href={"/"} className="hidden lg:inline-flex">
@@ -102,7 +102,7 @@ const Header = () => {
         <input
           type="text"
           placeholder="Search"
-          className="bg-gray-50 border-gray-200 outline-none text-sm w-full py-2 px-4 rounded max-w-[210px]"
+          className="bg-gray-50 bg-transparent border-gray-200 outline-none text-sm w-full py-2 px-4 rounded max-w-[210px]"
         />
         {/* Search input */}
         {session ? (
